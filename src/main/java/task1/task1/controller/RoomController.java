@@ -28,8 +28,8 @@ public class RoomController {
         if (!optionalHotel.isPresent()) return "Hotel ID not found";
         Room room = new Room();
         room.setFloor(roomDTO.getFloor());
-        room.setNumber(room.getNumber());
-        room.setSize(room.getSize());
+        room.setNumber(roomDTO.getNumber());
+        room.setSize(roomDTO.getSize());
         room.setHotel(optionalHotel.get());
         roomRepository.save(room);
         return "Room added";
